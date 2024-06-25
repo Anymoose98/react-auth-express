@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
 const PrivatePage = ({ element }) => {
@@ -9,7 +9,7 @@ const PrivatePage = ({ element }) => {
         return <Navigate to="/login" />;
     }
 
-    return <Route element={element} />;
+    return element;
 };
 
 export default PrivatePage;
