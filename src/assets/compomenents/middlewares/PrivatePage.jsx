@@ -2,14 +2,14 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-const PrivatePage = ({ element }) => {
+const PrivatePage = ({ children }) => {
     const { isLoggedIn } = useAuth();
 
-    if (!isLoggedIn) {
+    if (!isLoggedIn) {  
         return <Navigate to="/login" />;
     }
 
-    return element;
+    return children;
 };
 
 export default PrivatePage;

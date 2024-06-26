@@ -4,6 +4,7 @@ import indexStyles from './index.module.scss';
 import { Link } from "react-router-dom";
 
 const Index = () => {
+    console.log("prova")
     const [posts, setPosts] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
 

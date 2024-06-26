@@ -16,8 +16,13 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/Lista" element={<PrivatePage element={<Index />} />} />
-          <Route path="/Lista/:slug" element={<PrivatePage element={<Show />} />} />
+
+          <Route path="/lista" element={
+            <PrivatePage><Index /></PrivatePage>} />
+
+          <Route path="/lista/:slug" element={
+            <PrivatePage><Show /></PrivatePage>} />
+          
         </Routes>
       </AuthProvider>
     </BrowserRouter>
